@@ -1,0 +1,17 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 25-abr-2019, 9:48:01
+    Author     : daw2
+*/
+header h1{
+    text-align: center;
+    font-family: 'Germania One', cursive;     
+}
+footer{
+    font-family: 'Cinzel', serif;   
+    color: white;
+}

@@ -1,37 +1,28 @@
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title>Work In Progress</title>
-        <link rel="stylesheet" href="webroot/estilos/estilosAñadir.css">
-        <link rel="stylesheet" href="webroot/estilos/bootstrap.css">
-        <link href="https://fonts.googleapis.com/css?family=Cinzel" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Germania+One" rel="stylesheet">
-        <style>
-            .imagen{
-                text-align: center;
-            }
-            .imagen img{
-                width: 55%;
-            }
-        </style>
-    </head>
-    <body>        
-        <?php
-        /**
-          @author: Victor Martinez Mielgo
-          @since: 25/04/2019
-          Comentarios: WIP
-         */
-        ?>
-        <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">      
-            <div class="imagen">
-                <h1>WORK IN PROGRESS</h1>
-                <h3>Estamos trabajando en esta pagina. Disculpad las molestias</h3>
-                <img src="pikachu.jpg">
-            </div> 
-            <div class="imagen">
-                <input class='btn btn-primary' type="button" name="Volver" value="Volver" onclick="location = '../indexProyectoDWES.html'"/> 
-            </div>
-        </form>  
-    </body>
-</html>
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<?php
+/**
+  @author: Victor Martinez Mielgo
+  @since: 19/04/2019
+  Comentarios: LoginLogoff Modelo-Vista-Controlador
+ */
+require_once 'config/configuracion.php';
+require_once 'config/configuacionMVC.php';
+
+session_start();
+
+if (isset($_SESSION['usuarioDAW208']) && (!isset($_SESSION['pagina']))) {
+    include_once $controladores['inicio'];
+}
+if (isset($_SESSION['pagina'])) {
+    include_once $controladores[$_SESSION['pagina']];
+} else {
+    include_once $controladores['login'];
+}
+?>
+
