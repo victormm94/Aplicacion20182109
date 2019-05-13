@@ -6,6 +6,8 @@ try {
 
     $miBD = new PDO(mysql, usuario, pass); //Se inicia la variable como objeto PDO
     $miBD->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    
+    header('Content-Type: application/JSON');
 
     if ($_SERVER['REQUEST_METHOD'] == 'GET') {
         if (isset($_GET['CodDepartamento'])) {
@@ -13,13 +15,13 @@ try {
             $sql->bindValue(':codigo', $_GET['CodDepartamento']);
             $sql->execute();
             header("HTTP/1.1 200 OK");
-            echo json_encode($sql->fetch(PDO::FETCH_ASSOC));
+            echo json_encode($sql->fetch(PDO::FETCH_ASSOC),JSON_PRETTY_PRINT);
             exit();
         } else {
             $sql = $miBD->prepare("SELECT * FROM T02_Departamentos1");
             $sql->execute();
             header("HTTP/1.1 200 OK");
-            echo json_encode($sql->fetchAll(PDO::FETCH_ASSOC));
+            echo json_encode($sql->fetchAll(PDO::FETCH_ASSOC),JSON_PRETTY_PRINT);
             exit();
         }
     }
