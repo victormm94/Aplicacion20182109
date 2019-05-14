@@ -3,7 +3,8 @@
 require_once 'config/configuracion.php';
 require_once 'core/181025validacionFormularios.php';
 require_once 'model/Usuario.php';
-require_once 'model/Rest.php';   
+require_once 'model/Rest.php';
+require_once 'model/Departamento.php';
 
 $controladores = [
     'login' => 'controller/cLogin.php',
@@ -13,7 +14,8 @@ $controladores = [
     'registro' => 'controller/cRegistro.php',
     'miCuenta' => 'controller/cMiCuenta.php',
     'borrarCuenta' => 'controller/cBorrarCuenta.php',
-    'REST' => 'controller/cREST.php'
+    'REST' => 'controller/cREST.php',
+    'consultarDepartamento' => 'api/ConsultarDepartamento.php'
 ];
 $vistas = [
     'layout' => 'view/layout.php',

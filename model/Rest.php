@@ -27,8 +27,7 @@ class Rest {
         //$consulta = 'Latitud: '.$estacionJson2['latitud'];
         //return $consulta;
         
-    }
-
+    }  
 }
 ?>
 
