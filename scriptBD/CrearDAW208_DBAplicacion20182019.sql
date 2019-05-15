@@ -11,7 +11,8 @@
     CREATE TABLE IF NOT EXISTS T02_Departamentos1(
         CodDepartamento char(3) PRIMARY KEY,
 	DescDepartamento varchar(255) NOT null,
-        FechaBaja varchar(10)
+        FechaBaja varchar(10),
+        VolumenDeNegocio float
         )
 	ENGINE=INNODB;
 

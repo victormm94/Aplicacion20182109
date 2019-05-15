@@ -28,10 +28,8 @@
                 <h1>WORK IN PROGRESS</h1>
                 <h3>Estamos trabajando en esta pagina. Disculpad las molestias</h3>
                 <img src="webroot/images/pikachu.jpg">
-            </div> 
-            <div class="imagen">
                 <input class='btn btn-primary' type="submit" name="Volver" value="Volver"/> 
-            </div>
+            </div> 
         </form>  
     </body>
 </html>

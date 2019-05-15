@@ -15,7 +15,8 @@ $controladores = [
     'miCuenta' => 'controller/cMiCuenta.php',
     'borrarCuenta' => 'controller/cBorrarCuenta.php',
     'REST' => 'controller/cREST.php',
-    'consultarDepartamento' => 'api/ConsultarDepartamento.php'
+    'consultarDepartamento' => 'api/ConsultarDepartamento.php',
+    'MtoDepartamentos' => 'controller/cMtoDepartamentos.php'
 ];
 $vistas = [
     'layout' => 'view/layout.php',
@@ -26,7 +27,8 @@ $vistas = [
     'registro' => 'view/vRegistro.php',
     'miCuenta' => 'view/vMiCuenta.php',
     'borrarCuenta' => 'view/vBorrarCuenta.php',
-    'REST' => 'view/vREST.php'
+    'REST' => 'view/vREST.php',
+    'MtoDepartamentos' => 'view/vMtoDepartamentos.php'
 ];
 ?>
 

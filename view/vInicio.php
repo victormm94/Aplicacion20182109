@@ -7,7 +7,7 @@ and open the template in the editor.
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Programa</title>
+        <title>Inicio</title>
         <link rel="stylesheet" href="webroot/estilos/estilosAñadir.css">
         <link rel="stylesheet" href="webroot/estilos/bootstrap.css">
         <link href="https://fonts.googleapis.com/css?family=Cinzel" rel="stylesheet">
@@ -35,6 +35,10 @@ and open the template in the editor.
                             <input class="btn btn-primary" type="submit" name="Detalle" value="Detalle"> 
                             <input class="btn btn-primary" type="submit" name="MiCuenta" value="MiCuenta">
                             <input class="btn btn-primary" type="submit" name="REST" value="REST">  
+                            <input class="btn btn-primary" type="submit" name="MtoDepartamentos" value="MtoDepartamentos"> 
+                            <?php if ($_SESSION['usuarioDAW208']->getPerfil() == 'administrador') { ?>
+                                <input class="btn btn-danger" type="submit" name="MtoUsuarios" value="MtoUsuarios"/>
+                            <?php } ?>
                         </td>
                     </tr>
                 </table> 

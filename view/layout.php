@@ -11,7 +11,7 @@ if (isset($_SESSION['pagina'])) {
 ?>
 <html>
     <head>
-        <title>Aplicacion LoginLogoff</title>
+        <title>Aplicacion20182019</title>
         <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
         <link href="https://fonts.googleapis.com/css?family=Cinzel" rel="stylesheet">
@@ -22,7 +22,7 @@ if (isset($_SESSION['pagina'])) {
     <body>
         <header>
             <div class="container-fluid text-center bg-info">
-                <h1>Aplicacion LogInLogOff Modelo-Vista-Controlador</h1>
+                <h1>Aplicacion20182019 Modelo-Vista-Controlador</h1>
             </div>
         </header>
         <?php require_once $vista; ?>

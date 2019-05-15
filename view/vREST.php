@@ -64,7 +64,7 @@ and open the template in the editor.
                             Altitud: <?php echo $_SESSION['aemet']['altitud'] ?> <br>
                             Longitud: <?php echo $_SESSION['aemet']['longitud'] ?> <br>
                             Nombre: <?php echo $_SESSION['aemet']['nombre'] ?> <br>
-                            Provincia: <?php echo $_SESSION['aemet']['latitud'] ?> <br>
+                            Provincia: <?php echo $_SESSION['aemet']['provincia'] ?> <br>
                             <?php
                         }
                         ?>                  

@@ -1,6 +1,7 @@
 <?php
 
 require_once 'config/configuracion.php';
+require_once 'config/configuacionMVC.php';
 
 class DBPDO {
 
