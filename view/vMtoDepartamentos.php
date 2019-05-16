@@ -7,8 +7,7 @@ and open the template in the editor.
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>MtoDepartamentos</title>
-        <link rel="stylesheet" href="webroot/estilos/estilosAñadir.css">
+        <title>MtoDepartamentos</title>        
         <link rel="stylesheet" href="webroot/estilos/bootstrap.css">
         <link href="https://fonts.googleapis.com/css?family=Cinzel" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Germania+One" rel="stylesheet">
@@ -21,7 +20,7 @@ and open the template in the editor.
                 <div class="form-group">
                     <label for="exampleInputDescripcion">Busqueda por Descripcion</label>
                     <input type="text" class="form-control" id="exampleInputDescripcion" aria-describedby="emailHelp" placeholder="Enter DescDepartamento" name="DescDepartamento" value="<?php
-                    if (isset($_POST['DescDepartamento']) && is_null($aErrores['DescDepartamento'])) {
+                    if (isset($_POST['DescDepartamento'])) {
                         echo $_POST['DescDepartamento'];
                     }
                     ?>">                    
@@ -44,14 +43,18 @@ and open the template in the editor.
                 </thead>
                 <tbody>
                     <?php
-                    $i = 0;
                     for ($i = 0; $i < count($aDepartamento); $i++) {
                         if ($aDepartamento[$i]->getFechaBaja() == 0) {
                             ?>
                             <tr class="table-success">
                                 <td><?php echo $aDepartamento[$i]->getCodDepartamento(); ?></td>
                                 <td><?php echo $aDepartamento[$i]->getDescDepartamento(); ?></td>
-                                <td><?php echo $aDepartamento[$i]->getVolumenNegocio(); ?>€</td>
+                                <td><?php echo $aDepartamento[$i]->getVolumenDeNegocio(); ?></td>
+                                <td>
+                                    <input class="btn btn-primary" type="submit" name="Editar" value="Editar">
+                                    <input class="btn btn-primary" type="submit" name="BajaDepartamento" value="BajaDepartamento"> 
+                                    <input class="btn btn-primary" type="submit" name="Borrar" value="Borrar">
+                                </td>
                             </tr>
                             <?php
                         }

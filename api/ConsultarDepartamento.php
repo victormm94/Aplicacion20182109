@@ -9,6 +9,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
         $aDepartamento['CodDepartamento'] = $sql->getCodDepartamento();
         $aDepartamento['DescDepartamento'] = $sql->getDescDepartamento();
         $aDepartamento['FechaBaja'] = $sql->getFechaBaja();
+        $aDepartamento['VolumenDeNegocio'] = $sql->getVolumenDeNegocio();
         header("HTTP/1.1 200 OK");
         echo json_encode($aDepartamento); 
         exit();
