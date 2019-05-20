@@ -70,6 +70,16 @@ class DepartamentoPDO {
         return $existe;
     }
 
+    public static function modificaDepartamento($CodDepartamento, $DescDepartamento, $Volumen) {
+        $modificado = false;
+        $sql = 'update T02_Departamentos1 set DescDepartamento=?, VolumenDeNegocio=? where CodDepartamento=?';
+        $consulta = DBPDO::ejecutarConsulta($sql, [$DescDepartamento, $Volumen, $CodDepartamento]);
+        if ($consulta->rowCount() == 1) {
+            $modificado = true;
+        }
+        return $modificado;
+    }
+
 }
 
 ?>

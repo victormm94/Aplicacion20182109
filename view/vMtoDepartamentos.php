@@ -9,6 +9,7 @@ and open the template in the editor.
         <meta charset="UTF-8">
         <title>MtoDepartamentos</title>        
         <link rel="stylesheet" href="webroot/estilos/bootstrap.css">
+        <link rel="stylesheet" href="webroot/estilos/images/estilosDepartamento.css">
         <link href="https://fonts.googleapis.com/css?family=Cinzel" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Germania+One" rel="stylesheet">
     </head>
@@ -32,7 +33,7 @@ and open the template in the editor.
 
             <br>
 
-            <table class="table table-hover">
+            <table class="table table-hover container">
                 <thead>
                     <tr>
                         <th scope="col">Codigo</th>
@@ -46,14 +47,14 @@ and open the template in the editor.
                     for ($i = 0; $i < count($aDepartamento); $i++) {
                         if ($aDepartamento[$i]->getFechaBaja() == 0) {
                             ?>
-                            <tr class="table-success">
+                            <tr style="background-color: #f0eec8;">
                                 <td><?php echo $aDepartamento[$i]->getCodDepartamento(); ?></td>
                                 <td><?php echo $aDepartamento[$i]->getDescDepartamento(); ?></td>
                                 <td><?php echo $aDepartamento[$i]->getVolumenDeNegocio(); ?></td>
                                 <td>
-                                    <input class="btn btn-primary" type="submit" name="Editar" value="Editar">
+                                    <input class="btn btn-primary" type="submit" name="Editar<?php echo $i ?>" value="Editar">
                                     <input class="btn btn-primary" type="submit" name="BajaDepartamento" value="BajaDepartamento"> 
-                                    <input class="btn btn-primary" type="submit" name="Borrar" value="Borrar">
+                                    <input class="btn btn-primary" type="submit" name="Borrar<?php echo $i ?>" value="Borrar">                                    
                                 </td>
                             </tr>
                             <?php
@@ -63,7 +64,6 @@ and open the template in the editor.
                 </tbody>
             </table>
         </form>
-
     </body>
 </html>
 

@@ -7,7 +7,7 @@
  */
 
 
-$_POST['DescDepartamento'] = '';
+//$_POST['DescDepartamento'] = '';
 $aDepartamento = Departamento::buscarDepartamentoPorDescripcion($_POST['DescDepartamento']);
 
 if (isset($_REQUEST['Salir'])) {
@@ -16,24 +16,40 @@ if (isset($_REQUEST['Salir'])) {
     exit;
 }
 
-if (isset($_POST['Borrar'])) {
-    $_SESSION['pagina'] = 'eliminarDepartamento';
-    header('Location: index.php');
-    exit;
+for ($i = 0; $i < count($aDepartamento); $i++) {
+
+    if (isset($_POST['Borrar' . $i])) {
+        $_SESSION['CodDepartamento'] = $aDepartamento[$i]->getCodDepartamento();
+        $_SESSION['pagina'] = 'eliminarDepartamento';
+        header('Location: index.php');
+        exit;
+    }
+
+    if (isset($_POST['BajaLogica'])) {
+        $_SESSION['paginaAnterior'] = $_SESSION['pagina'];
+        $_SESSION['pagina'] = 'wip';
+        Header("Location: index.php");
+        exit;
+    }
+
+    if (isset($_POST['Editar' . $i])) {
+        $_SESSION['CodDepartamento'] = $aDepartamento[$i]->getCodDepartamento();
+        $_SESSION['DescDepartamento'] = $aDepartamento[$i]->getDescDepartamento();
+        $_SESSION['FechaBaja'] = $aDepartamento[$i]->getFechaBaja();
+        $_SESSION['VolumenDeNegocio'] = $aDepartamento[$i]->getVolumenDeNegocio();
+        $_SESSION['pagina'] = 'consultarModificarDepartamento';
+        Header("Location: index.php");
+        exit;
+    }
+
+    if (isset($_POST['BajaDepartamento'])) {
+        $_SESSION['paginaAnterior'] = $_SESSION['pagina'];
+        $_SESSION['pagina'] = 'wip';
+        Header("Location: index.php");
+        exit;
+    }
 }
 
-if (isset($_POST['BajaDepartamento'])) {
-    $_SESSION['paginaAnterior'] = $_SESSION['pagina'];
-    $_SESSION['pagina'] = 'wip';
-    Header("Location: index.php");
-    exit;
-}
-
-if (isset($_POST['Agregar'])) {
-    $_SESSION['pagina'] = 'altaDepartamento';
-    header('Location: index.php');
-    exit;
-}
 if (isset($_POST['Buscar'])) {
     $aDepartamento = Departamento::buscarDepartamentoPorDescripcion($_POST['DescDepartamento']);
     require_once $vistas['layout'];

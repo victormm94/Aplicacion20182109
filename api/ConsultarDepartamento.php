@@ -4,15 +4,15 @@
 
 if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     if (isset($_GET['Codigo'])) {
-        $sql = Departamento::buscarDepartamentoPorCodigo($_GET['Codigo']);
+        $datos = Departamento::buscarDepartamentoPorCodigo($_GET['Codigo']);
         $aDepartamento = [];
-        $aDepartamento['CodDepartamento'] = $sql->getCodDepartamento();
-        $aDepartamento['DescDepartamento'] = $sql->getDescDepartamento();
-        $aDepartamento['FechaBaja'] = $sql->getFechaBaja();
-        $aDepartamento['VolumenDeNegocio'] = $sql->getVolumenDeNegocio();
+        $aDepartamento['CodDepartamento'] = $datos->getCodDepartamento();
+        $aDepartamento['DescDepartamento'] = $datos->getDescDepartamento();
+        $aDepartamento['FechaBaja'] = $datos->getFechaBaja();
+        $aDepartamento['VolumenDeNegocio'] = $datos->getVolumenDeNegocio();
         header("HTTP/1.1 200 OK");
-        echo json_encode($aDepartamento); 
+        echo json_encode($aDepartamento);
         exit();
-    } 
+    }
 }
 ?>

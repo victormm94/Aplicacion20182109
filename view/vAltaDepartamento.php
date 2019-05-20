@@ -7,13 +7,9 @@ and open the template in the editor.
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Alta Departamento</title>
-        <style>
-            p{
-                color:red;
-            }
-        </style>        
+        <title>Alta Departamento</title>       
         <link rel="stylesheet" href="webroot/estilos/bootstrap.css">
+        <link rel="stylesheet" href="webroot/estilos/images/estilosDepartamento.css">
     </head>
     <body>
         <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">  
@@ -46,6 +42,26 @@ and open the template in the editor.
                 <?php if ($aErrores['error'] != null) { ?>
                     <div class = "alert alert-dismissible alert-primary">
                         <?php echo $aErrores['error']; ?>
+                    </div>
+                <?php }
+                ?>
+                <?php if ($aErrores['codDepartamento'] != null) { ?>
+                    <div class = "alert alert-dismissible alert-primary">
+                        <?php echo $aErrores['codDepartamento']; ?>
+                    </div>
+                <?php }
+                ?>
+
+                <?php if ($aErrores['descDepartamento'] != null) { ?>
+                    <div class = "alert alert-dismissible alert-primary">
+                        <?php echo $aErrores['descDepartamento']; ?>
+                    </div>
+                <?php }
+                ?>
+
+                <?php if ($aErrores['volumen'] != null) { ?>
+                    <div class = "alert alert-dismissible alert-primary">
+                        <?php echo $aErrores['volumen']; ?>
                     </div>
                 <?php }
                 ?>

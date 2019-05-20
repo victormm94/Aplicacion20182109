@@ -18,7 +18,8 @@ $controladores = [
     'consultarDepartamento' => 'api/ConsultarDepartamento.php',
     'MtoDepartamentos' => 'controller/cMtoDepartamentos.php',
     'eliminarDepartamento' => 'controller/cEliminarDepartamento.php',
-    'altaDepartamento' => 'controller/cAltaDepartamento.php'
+    'altaDepartamento' => 'controller/cAltaDepartamento.php',
+    'consultarModificarDepartamento' => 'controller/cConsultarModificarDepartamento.php'
 ];
 $vistas = [
     'layout' => 'view/layout.php',
@@ -32,7 +33,8 @@ $vistas = [
     'REST' => 'view/vREST.php',
     'MtoDepartamentos' => 'view/vMtoDepartamentos.php',
     'eliminarDepartamento' => 'view/vEliminarDepartamento.php',
-    'altaDepartamento' => 'view/vAltaDepartamento.php'
+    'altaDepartamento' => 'view/vAltaDepartamento.php',
+    'consultarModificarDepartamento' => 'view/vConsultarModificarDepartamento.php'
 ];
 ?>
 

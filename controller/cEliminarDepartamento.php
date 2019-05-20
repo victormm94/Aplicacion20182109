@@ -1,14 +1,16 @@
 <?php
 
-if (isset($_POST['Aceptar'])) {
-    $eliminar = Departamento::bajaFisicaDepartamento();   
+$departamento = Departamento::buscarDepartamentoPorCodigo($_SESSION['CodDepartamento']);
+
+if (isset($_REQUEST['Cancelar'])) {
+    $_SESSION['paginaAnterior'] = $_SESSION['pagina'];
     $_SESSION['pagina'] = 'MtoDepartamentos';
     header('Location: index.php');
     exit;
 }
 
-if (isset($_REQUEST['Cancelar'])) {
-    $_SESSION['paginaAnterior'] = $_SESSION['pagina'];
+if (isset($_REQUEST['Aceptar'])) {
+    $departamento->bajaFisicaDepartamento();
     $_SESSION['pagina'] = 'MtoDepartamentos';
     header('Location: index.php');
     exit;

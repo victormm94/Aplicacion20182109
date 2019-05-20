@@ -8,7 +8,7 @@ $aFormulario = ['descripcion' => null
 $aErrores = ['descripcion' => null
 ];
 
-if (isset($_REQUEST['Volver'])) {    
+if (isset($_REQUEST['Volver'])) {
     $_SESSION['pagina'] = 'inicio';
     header('Location: index.php');
     exit;

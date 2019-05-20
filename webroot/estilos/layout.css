@@ -7,11 +7,27 @@ and open the template in the editor.
     Created on : 25-abr-2019, 9:48:01
     Author     : daw2
 */
+html{
+    min-height: 100%;
+    position: relative;
+}
+header{
+    background-color: #0c084c;
+    color: white;
+}
 header h1{
     text-align: center;
     font-family: 'Germania One', cursive;     
 }
 footer{
+    bottom: 0;
+    width: 100%;
+    position: absolute;    
     font-family: 'Cinzel', serif;   
-    color: white;
+    color: white;    
+    background-color: #0c084c;
+}
+.footer{
+    margin-top: 50px; 
+    text-align: center;
 }

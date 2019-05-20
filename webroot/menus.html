@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Menu</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="Librerias/bootstrap.min.css">
+        <script src="Librerias/jquery-3.3.1.js"></script>
+        <script src="Librerias/popper.min.js"></script>
+        <script src="Librerias/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <nav class="navbar navbar-expand navbar-dark bg-dark">
+                    <a class="navbar-brand" href="#">Nav no responsive            
+                    </a>
+                    
+                    <div>
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="#"><span class="glyphicon glyphicon-asterisk"></span>Inicio</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"></a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <br>
+        <div class="container">
+            <div class="row">
+                <nav class="navbar navbar-expand-sm navbar-light bg-success">
+                    <a class="navbar-brand" href="#">Expandir en sm</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collpase" data-target="#navbars">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbar03">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Inicio</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Proyectos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Ejercicios</a>
+                            </li>
+                            <li class="nav-item dropdown bg-success">
+                                <a class="nav-link dropdown-toggle bg-success" href="" id="dropdown03" data-toggle="dropdown"></a>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="#">Accion</a>
+                                    <a class="dropdown-item" href="#">Otra accion</a>
+                                    <a class="dropdown-item" href="#">Algo mas aqui</a>
+                                </div>
+                            </li>
+                        </ul>
+                        <form class="form-inline my-2 my-md-0">
+                            <input class="form-control" type="text" placeholder="Search">
+                        </form>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <br>
+        <div class="container">
+            <div class="row">
+                <div id="demo" class="carousel slide w-50 mx-auto" data-ride="carousel">
+                    <div class="carousel-inner w-50 mx-auto">
+                        <div class="carousel-item active">
+                            <img src="images/1.jpg" alt="primera imagen" class="img-fluid">
+                            <div class="carousel-caption">
+                                <h1>Titulo</h1>
+                                <p>La imagen</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="images/2.jpg" alt="primera imagen" class="img-fluid">
+                            <div class="carousel-caption">
+                                <h1>Titulo2</h1>
+                                <p>La imagen2</p>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <img src="images/3.jpg" alt="primera imagen" class="img-fluid">
+                            <div class="carousel-caption">
+                                <h1>Titulo3</h1>
+                                <p>La imagen3</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#demo" class="carousel-control-next bg-primary" data-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </a>
+
+                    <a href="#demo" class="carousel-control-prev bg-primary" data-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </a> 
+
+                    <ul class="carousel-indicators">
+                        <li data-target="#demo" data-slide-to="0" class="active"></li>
+                        <li data-target="#demo" data-slide-to="1" class="active"></li>
+                        <li data-target="#demo" data-slide-to="2" class="active"></li>
+                    </ul>
+                </div>
+            </div>
+        </div> 
+        <br>
+        <div class="container">
+            <table class="table table-responsive-xs">
+                <thead>
+                    <tr>
+                        <th>Titulo1</th>
+                        <th>Titulo2</th>
+                        <th>Titulo3</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Elemento1</td>
+                        <td>Elemento2</td>
+                        <td>Elemento3</td>
+                    </tr>
+                    <tr>
+                        <td>Elemento3</td>
+                        <td>Elemento4</td>
+                        <td>Elemento5</td>
+                    </tr>
+                    <tr>
+                        <td>Elemento3</td>
+                        <td>Elemento4</td>
+                        <td>Elemento5</td>
+                    </tr>
+                    <tr>
+                        <td>Elemento3</td>
+                        <td>Elemento4</td>
+                        <td>Elemento5</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <br>
+        <div class="container">
+            <form>
+                <div class="form-group">
+                    <label for="nombre">Ingrese su nombre</label>
+                    <input type="text" class="form-control" id="nombre" name="nombre">
+                </div>  
+                <div class="form-group">
+                    <label for="nombre">Ingrese su contraseña</label>
+                    <input type="password" class="form-control" id="clave" name="clave">
+                </div> 
+                <button type="submit" class="btn btn-primary">Enviar</button>                   
+            </form>
+        </div>
+        <br>
+        <div class="container">
+            <form>
+                <div class="form-check">                    
+                    <input class="form-check-input" type="checkbox" value="" id="checkbox1" name="checkbox1">Checkbox1
+                    <label class="form-check-label" for="chebox1"></label>
+                </div>  
+                <div class="form-check">                    
+                    <input class="form-check-input" type="checkbox" value="" id="checkbox1" name="checkbox2">Checkbox2
+                    <label class="form-check-label" for="chebox2"></label>
+                </div>
+                <div class="form-check">                    
+                    <input class="form-check-input" type="radio" value="" id="radio1" name="radio1">Radio1
+                    <label class="form-check-label" for="radio1"></label>
+                </div>  
+                <div class="form-check">                    
+                    <input class="form-check-input" type="radio" value="" id="radio2" name="radio1">Radio2
+                    <label class="form-check-label" for="radio1"></label>
+                </div> 
+                <div class="form-group">
+                    <label for="control1">selecciones un elemento</label>
+                    <select class="form-control" id="control1" name="control1">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="control2">selecciones varios elemento</label>
+                    <select multiple class="form-control" id="control2" name="control2">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                    </select>
+                </div>  
+                <button type="submit" class="btn btn-primary">Enviar</button>                   
+            </form>
+        </div>
+        <br>
+        <div class="container">
+            <form>
+                <div class="form-group row">
+                    <label class="col-xs-12 col-md-4" for="nombre">Ingrese su nombre</label>
+                    <input type="text" class="form-control col-xs-12 col-md-8" id="nombre" name="nombre">
+                </div>  
+                <div class="form-group row">
+                    <label class="col-xs-12 col-md-4" for="nombre">Ingrese su contraseña</label>
+                    <input type="password" class="form-control col-xs-12 col-md-8" id="clave" name="clave">
+                </div> 
+                <div class="form-group row">
+                    <div class="offset-md-4 col-md-9">
+                        <button type="submit" class="btn btn-primary">Enviar</button>  
+                    </div>
+                </div>
+            </form>
+        </div>
+        <br>
+        <div class="container">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1">@</span>
+                <input type="text" class="form-control" placeholder="Username">
+            </div>
+
+            <div class="input-group-mb-3">
+                <input type="text" class="form-control" placeholder="Euros">
+                <div class="input-group-append">
+                    <span class="input-group-text" id="basic-addon2">€</span>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="container">
+            <form>
+                <div class="form-group">
+                    <label for="validacion1">Nombre</label>
+                    <input type="text" class="form-control is-valid" id="validacion1" placeholder="Nombre" required>
+                </div>
+                <div class="form-group">
+                    <label for="validacion2">Email</label>
+                    <input type="email" class="form-control is-invalid" id="validacion2" placeholder="email" required>
+                </div>                    
+            </form>
+        </div>
+        <br>
+        <div class="container">
+            <ul class="list-group">
+                <li class="list-group-item">DIW</li>
+                <li class="list-group-item">DAW</li>
+                <li class="list-group-item">DES</li>
+                <li class="list-group-item">DEC</li>
+            </ul>
+        </div>
+        <br>
+        <div class="container">
+            <div class="list-group">
+                <a href="#" class="list-group-item">
+                    <h1 class="list-group-item-heading">Titulo del elemento lista</h1>
+                    <p class="list-group-item-text">asdasdasdasdasd</p>
+                </a>                
+            </div>
+        </div>
+        <br>
+        <div class="container">
+            <div class="media">
+                <img class="m-3" src="Captura.PNG" alt="image">
+                <div class="media-body">
+                    <h1>Media Heading</h1>
+                    asdfasdfasdfasdfasd
+                    <div class="media">
+                        <a class="" href="#">
+                            <img class="m-3" src="Captura.PNG" alt="image">                        
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="container">
+            <a data-toggle="mensaje" title="Si haces hover sale una pista" href="#" class="btn btn-outline-success">Pista</a>
+            <script type="text/javascript">
+                $(document).ready(function (){
+                   $('[data-toggle="mensaje"]').tooltip(); 
+                });
+            </script>
+        </div>
+        <br>
+        <div class="container">
+            <a href="#" data-toggle="popover" title="Lorem Titulo" data-content="Lorem Ipsum asdfghjklñ"></a>
+            <script type="text/javascript">
+                $(document).ready(function (){
+                   $('[data-toggle="popover"]').popover(); 
+                });
+            </script>
+        </div>   
+        <br>
+        <div class="container">
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#dialogo1">Abrir</button>
+        </div>
+    </body>
+</html>

@@ -12,7 +12,7 @@ and open the template in the editor.
         <link rel="stylesheet" href="webroot/estilos/bootstrap.css">
     </head>
     <body> 
-        <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">  
+        <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">              
             <div class="container-fluid col-lg-3">
                 <legend>Borrar Departamento</legend>                
                 <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">

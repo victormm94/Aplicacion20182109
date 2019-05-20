@@ -7,11 +7,11 @@ and open the template in the editor.
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Inicio</title>
-        <link rel="stylesheet" href="webroot/estilos/estilosAñadir.css">
+        <title>Inicio</title>        
         <link rel="stylesheet" href="webroot/estilos/bootstrap.css">
         <link href="https://fonts.googleapis.com/css?family=Cinzel" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Germania+One" rel="stylesheet">
+        <link rel="stylesheet" href="webroot/estilos/estilosAñadir.css">
     </head>
     <body>        
         <?php
@@ -22,26 +22,27 @@ and open the template in the editor.
          */
         ?>   
         <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
-            <div class="contenedor">                
-                <table class="busqueda">   
-                    <tr>
-                        <td>
-                            <p style="text-align: center"><?php echo $_SESSION['visitas'] ?></p>   
-                        </td>
-                    </tr>
-                    <tr>                   
-                        <td>
-                            <input class="btn btn-primary" type="submit" name="Cerrar_Sesion" value="Cerrar_Sesion" >
-                            <input class="btn btn-primary" type="submit" name="Detalle" value="Detalle"> 
-                            <input class="btn btn-primary" type="submit" name="MiCuenta" value="MiCuenta">
-                            <input class="btn btn-primary" type="submit" name="REST" value="REST">  
-                            <input class="btn btn-primary" type="submit" name="MtoDepartamentos" value="MtoDepartamentos"> 
-                            <?php if ($_SESSION['usuarioDAW208']->getPerfil() == 'administrador') { ?>
-                                <input class="btn btn-danger" type="submit" name="MtoUsuarios" value="MtoUsuarios"/>
-                            <?php } ?>
-                        </td>
-                    </tr>
-                </table> 
+            <div class="container-fluid">                               
+                <div class="form-group row justify-content-center" id="caja">
+                    <legend class=" row justify-content-center">Mensaje de bienvenida</legend>
+                    <p style="color: #00b7a8"><?php echo $_SESSION['visitas'] ?></p> 
+                </div>
+
+                <div class="form-group  row justify-content-center">
+                    <legend class=" row justify-content-center">Perfil de Usuario</legend>
+                    <input class="btn" style="background-color: #00b7a8;" type="submit" name="Cerrar_Sesion" value="Cerrar_Sesion">
+                    <input class="btn" style="background-color: #00b7a8;" type="submit" name="Detalle" value="Detalle"> 
+                    <input class="btn" style="background-color: #00b7a8;" type="submit" name="MiCuenta" value="MiCuenta">
+                </div>
+
+                <div class="form-group  row justify-content-center">
+                    <legend class=" row justify-content-center">Mantenimietos y REST</legend>
+                    <input class="btn" style="background-color: #00b7a8;" type="submit" name="REST" value="REST">  
+                    <input class="btn" style="background-color: #00b7a8;" type="submit" name="MtoDepartamentos" value="MtoDepartamentos"> 
+                    <?php if ($_SESSION['usuarioDAW208']->getPerfil() == 'administrador') { ?>
+                        <input class="btn btn-danger" type="submit" name="MtoUsuarios" value="MtoUsuarios"/>
+                    <?php } ?>
+                </div>
             </div>
         </form>    
     </body>

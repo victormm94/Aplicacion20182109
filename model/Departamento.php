@@ -74,6 +74,9 @@ class Departamento {
         return $existe;
     }
 
+    public function modificaDepartamento($DescDepartamento, $Volumen) {
+        return DepartamentoPDO::modificaDepartamento($this->getCodDepartamento(), $DescDepartamento, $Volumen);
+    }
 }
 
 ?>

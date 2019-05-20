@@ -7,13 +7,9 @@ and open the template in the editor.
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>RESTIP</title>
-        <style>
-            p{
-                color:red;
-            }
-        </style>        
+        <title>RESTIP</title>     
         <link rel="stylesheet" href="webroot/estilos/bootstrap.css">
+        <link rel="stylesheet" href="webroot/estilos/images/estilosDepartamento.css">
     </head>
     <body> 
         <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post"> 

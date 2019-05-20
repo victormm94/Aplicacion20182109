@@ -23,6 +23,9 @@ header h1{
 footer{   
     position: absolute;
     width: 100%;
-    bottom: 0px;   
-    
+    bottom: 0px;  
+}
+#caja{
+    background-color: #f0eec8 !important;
+    position: relative !important;
 }
