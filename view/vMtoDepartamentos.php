@@ -14,8 +14,11 @@ and open the template in the editor.
         <link href="https://fonts.googleapis.com/css?family=Germania+One" rel="stylesheet">
     </head>
     <body>       
+        <?php
+        setlocale(LC_TIME, 'es_ES.UTF-8');
+        date_default_timezone_set('Europe/Madrid');
+        ?>
         <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
-
             <div class="container-fluid col-lg-3">
                 <legend>Busqueda</legend>
                 <div class="form-group">
@@ -39,6 +42,7 @@ and open the template in the editor.
                         <th scope="col">Codigo</th>
                         <th scope="col">Descripcion</th>
                         <th scope="col">Volumen</th>
+                        <th scope="col">FechaBaja</th>
                         <th scope="col">Botones</th>
                     </tr>
                 </thead>
@@ -51,9 +55,23 @@ and open the template in the editor.
                                 <td><?php echo $aDepartamento[$i]->getCodDepartamento(); ?></td>
                                 <td><?php echo $aDepartamento[$i]->getDescDepartamento(); ?></td>
                                 <td><?php echo $aDepartamento[$i]->getVolumenDeNegocio(); ?></td>
+                                <td><?php echo $aDepartamento[$i]->getFechaBaja(); ?></td>
                                 <td>
                                     <input class="btn btn-primary" type="submit" name="Editar<?php echo $i ?>" value="Editar">
-                                    <input class="btn btn-primary" type="submit" name="BajaDepartamento" value="BajaDepartamento"> 
+                                    <input class="btn btn-primary" type="submit" name="BajaDepartamento<?php echo $i ?>" value="BajaDepartamento"> 
+                                    <input class="btn btn-primary" type="submit" name="Borrar<?php echo $i ?>" value="Borrar">                                    
+                                </td>
+                            </tr>
+                            <?php
+                        } else {
+                            ?> 
+                            <tr style="background-color: #e4312c;">
+                                <td><?php echo $aDepartamento[$i]->getCodDepartamento(); ?></td>
+                                <td><?php echo $aDepartamento[$i]->getDescDepartamento(); ?></td>
+                                <td><?php echo $aDepartamento[$i]->getVolumenDeNegocio(); ?></td>
+                                <td><?php echo $fecha = date('d-m-Y, H:i:s', $aDepartamento[$i]->getFechaBaja()); ?></td>
+                                <td>                                    
+                                    <input class="btn btn-primary" type="submit" name="AltaDepartamento<?php echo $i ?>" value="AltaDepartamento"> 
                                     <input class="btn btn-primary" type="submit" name="Borrar<?php echo $i ?>" value="Borrar">                                    
                                 </td>
                             </tr>

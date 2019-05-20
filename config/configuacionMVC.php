@@ -19,7 +19,10 @@ $controladores = [
     'MtoDepartamentos' => 'controller/cMtoDepartamentos.php',
     'eliminarDepartamento' => 'controller/cEliminarDepartamento.php',
     'altaDepartamento' => 'controller/cAltaDepartamento.php',
-    'consultarModificarDepartamento' => 'controller/cConsultarModificarDepartamento.php'
+    'consultarModificarDepartamento' => 'controller/cConsultarModificarDepartamento.php',
+    'api' => 'api/ConsultarDepartamento.php',
+    'bajaLogicaDepartamento' => 'controller/cBajaLogicaDepartamento.php',
+    'rehabilitarDepartamento' => 'controller/cRehabilitarDepartamento.php'
 ];
 $vistas = [
     'layout' => 'view/layout.php',
@@ -34,7 +37,9 @@ $vistas = [
     'MtoDepartamentos' => 'view/vMtoDepartamentos.php',
     'eliminarDepartamento' => 'view/vEliminarDepartamento.php',
     'altaDepartamento' => 'view/vAltaDepartamento.php',
-    'consultarModificarDepartamento' => 'view/vConsultarModificarDepartamento.php'
+    'consultarModificarDepartamento' => 'view/vConsultarModificarDepartamento.php',
+    'bajaLogicaDepartamento' => 'view/vBajaLogicaDepartamento.php',
+    'rehabilitarDepartamento' => 'view/vRehabilitarDepartamento.php'
 ];
 ?>
 

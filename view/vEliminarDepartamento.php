@@ -14,14 +14,13 @@ and open the template in the editor.
     <body> 
         <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">              
             <div class="container-fluid col-lg-3">
-                <legend>Borrar Departamento</legend>                
-                <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
-                    <div class="form-group">
-                        <label for="exampleInputBorrarDepartamento">Esta Seguro que quiere borrar este Departamento?</label>
-                        <input class="btn btn-primary" type="submit" name="Aceptar" value="Aceptar"> 
-                        <input class="btn btn-primary" type="submit" name="Cancelar" value="Cancelar">
-                    </div>
-                </form>                
+                <?php echo $_SESSION['CodDepartamento']; ?>
+                <legend>Borrar Departamento</legend>  
+                <div class="form-group">
+                    <label for="exampleInputBorrarDepartamento">Esta Seguro que quiere borrar este Departamento?</label>
+                    <input class="btn btn-primary" type="submit" name="Aceptar" value="Aceptar"> 
+                    <input class="btn btn-primary" type="submit" name="Cancelar" value="Cancelar">
+                </div>
             </div>
         </form>         
     </body>

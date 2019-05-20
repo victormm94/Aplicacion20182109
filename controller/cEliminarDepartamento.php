@@ -9,11 +9,12 @@ if (isset($_REQUEST['Cancelar'])) {
     exit;
 }
 
-if (isset($_REQUEST['Aceptar'])) {
-    $departamento->bajaFisicaDepartamento();
-    $_SESSION['pagina'] = 'MtoDepartamentos';
-    header('Location: index.php');
-    exit;
+if (isset($_REQUEST['Aceptar'])) {    
+    if ($departamento->bajaFisicaDepartamento()) {
+        $_SESSION['pagina'] = 'MtoDepartamentos';
+        header('Location: index.php');
+        exit;
+    }
 } else {
     $_SESSION['pagina'] = 'eliminarDepartamento';
     require_once $vistas["layout"];

@@ -25,9 +25,9 @@ for ($i = 0; $i < count($aDepartamento); $i++) {
         exit;
     }
 
-    if (isset($_POST['BajaLogica'])) {
-        $_SESSION['paginaAnterior'] = $_SESSION['pagina'];
-        $_SESSION['pagina'] = 'wip';
+    if (isset($_POST['AltaDepartamento' . $i])) {
+        $_SESSION['CodDepartamento'] = $aDepartamento[$i]->getCodDepartamento();
+        $_SESSION['pagina'] = 'rehabilitarDepartamento';
         Header("Location: index.php");
         exit;
     }
@@ -42,9 +42,9 @@ for ($i = 0; $i < count($aDepartamento); $i++) {
         exit;
     }
 
-    if (isset($_POST['BajaDepartamento'])) {
-        $_SESSION['paginaAnterior'] = $_SESSION['pagina'];
-        $_SESSION['pagina'] = 'wip';
+    if (isset($_POST['BajaDepartamento' . $i])) {
+        $_SESSION['CodDepartamento'] = $aDepartamento[$i]->getCodDepartamento();
+        $_SESSION['pagina'] = 'bajaLogicaDepartamento';
         Header("Location: index.php");
         exit;
     }

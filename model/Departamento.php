@@ -65,7 +65,7 @@ class Departamento {
 
     public function bajaFisicaDepartamento() {
         $CodDepartamento = $this->getCodDepartamento();
-        $borrarDepartamento = UsuarioPDO::borrarUsuario($CodDepartamento);
+        $borrarDepartamento = DepartamentoPDO::bajaFisicaDepartamento($CodDepartamento);
         return $borrarDepartamento;
     }
 
@@ -77,6 +77,19 @@ class Departamento {
     public function modificaDepartamento($DescDepartamento, $Volumen) {
         return DepartamentoPDO::modificaDepartamento($this->getCodDepartamento(), $DescDepartamento, $Volumen);
     }
+
+    public function bajaLogicaDepartamento() {
+        $CodDepartamento = $this->getCodDepartamento();
+        $bajaLogica = DepartamentoPDO::bajaLogicaDepartamento($CodDepartamento);
+        return $bajaLogica;
+    }
+
+    public function rehabilitaDepartamento() {
+        $CodDepartamento = $this->getCodDepartamento();
+        $rehabilitar = DepartamentoPDO::rehabilitaDepartamento($CodDepartamento);
+        return $rehabilitar;
+    }
+
 }
 
 ?>

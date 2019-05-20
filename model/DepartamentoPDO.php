@@ -80,6 +80,28 @@ class DepartamentoPDO {
         return $modificado;
     }
 
+    public static function bajaLogicaDepartamento($CodDepartamento) {
+        $modificado = false;
+        $fecha = new DateTime();
+        $sql = 'update T02_Departamentos1 set FechaBaja=? where CodDepartamento=?';
+        $consulta = DBPDO::ejecutarConsulta($sql, [$fecha->getTimestamp(), $CodDepartamento]);
+        if ($consulta->rowCount() == 1) {
+            $modificado = true;
+        }
+        return $modificado;
+    }
+
+    public static function rehabilitaDepartamento($CodDepartamento) {
+        $modificado = false;
+        $fecha = 0;
+        $sql = 'update T02_Departamentos1 set FechaBaja=? where CodDepartamento=?';
+        $consulta = DBPDO::ejecutarConsulta($sql, [$fecha, $CodDepartamento]);
+        if ($consulta->rowCount() == 1) {
+            $modificado = true;
+        }
+        return $modificado;
+    }
+
 }
 
 ?>
