@@ -28,6 +28,7 @@ if (isset($_POST['MtoDepartamentos'])) {
 }
 
 if (isset($_POST['MtoUsuarios'])) {
+    $_SESSION['paginaAnterior'] = $_SESSION['pagina'];
     $_SESSION['pagina'] = 'wip';
     Header("Location: index.php");
     exit;
